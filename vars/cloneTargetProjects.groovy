@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 def call (REPOSITORIOS) {
     String[] repos
-    repos = repos.split(',')
+    repos = REPOSITORIOS.split(',')
     for(String repo : repos) {
         println(repo)
     }

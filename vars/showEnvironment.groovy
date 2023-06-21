@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 def call() {
-    echo "Running Job: ${env.JOB_NAME} Build: ${env.BUILD_ID} on ${env.JENKINS_URL}"
+    echo "Running Job: ${env.JOB_NAME}  \nBuild: ${env.BUILD_ID} on ${env.JENKINS_URL}"
     echo "----------- HOSTNAME --------------"
     sh "hostname"
     echo "-----------------------------------"

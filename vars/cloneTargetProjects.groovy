@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 def call (REPOSITORIOS) {
-    echo REPOSITORIOS
-//     sh """
-// for repositorio in \"\${${REPOSITORIOS}[@]}\"
-//         do
-//   echo \$repositorio
-// done
-// """
+  sh "repos=($(echo ${REPOSITORIOS}))"
+  sh '''
+for repon in "${repos}[@]}"
+  do
+    echo $repo
+done
+'''
 }

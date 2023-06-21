@@ -1,6 +1,10 @@
 #!/usr/bin/env groovy
 def call() {
-  echo "-----------------------------------"
-  echo "---------- ${STAGE_NAME} ----------"
-  echo "-----------------------------------"
+    def guiones = 50
+    def pad     = 20
+    println ""
+    println " HOSTNAME ".center(guiones,"-")
+    println println " ${STAGE_NAME} ".center(guiones,"-")
+    println " HOSTNAME ".center(guiones,"-")
+    println ""
 }

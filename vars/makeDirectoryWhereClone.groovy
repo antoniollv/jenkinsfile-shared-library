@@ -5,6 +5,6 @@ def call(REPOSITORIO) {
     //Quitar el final .git
     ultimoDelimitador = REPOSITORIO.lastIndexOf(delimitador)
     REPOSITORIO = REPOSITORIO.substring(ultimoDelimitador + 1)
-    sh "mkdir -f $REPOSITORIO"
+    //sh "mkdir -f $REPOSITORIO"
     return REPOSITORIO
 }

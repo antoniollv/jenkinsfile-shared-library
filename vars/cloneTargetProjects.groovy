@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def call (REPOSITORIOS, RAMA, GIT_USER) {
+def call(REPOSITORIOS, RAMA, GIT_USER) {
     String[] repos
     repos = REPOSITORIOS.split(',')
     for(String repo : repos) {

@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
-def call (REPOSITORIO, RAMA, GIT_USER) {
-    dir = makeDirectoryWhereClone(REPOSITORIO, RAMA)
+def call(REPOSITORIO, RAMA, GIT_USER) {
+    dir = makeDirectoryWhereClone(REPOSITORIO)
     sh "cd $dir"
     git branch: "$RAMA",
         credentialsId: "$GIT_USER",

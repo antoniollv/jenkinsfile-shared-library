@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
-def call (REPOSITORIOS) {
+def call (REPOSITORIOS, RAMA, GIT_USER) {
     String[] repos
     repos = REPOSITORIOS.split(',')
     for(String repo : repos) {
-        println(repo)
+        cloneTargetProject(repo, RAMA, GIT_USER)
     }
 }

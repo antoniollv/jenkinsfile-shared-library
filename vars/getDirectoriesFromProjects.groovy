@@ -4,8 +4,8 @@ def call(String projects) {
 
     String[] repos
     repos = projects.split(',')
-    for(String repo : repos) {
-        repo = getDirectoryFromProject(repo)
+    for(int i = 0; i < repos.size(); ++i) {
+        repo[i] = getDirectoryFromProject(repo[i])
     }
     return repos
 }

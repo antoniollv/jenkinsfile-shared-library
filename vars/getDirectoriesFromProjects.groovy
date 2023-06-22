@@ -5,7 +5,7 @@ def call(String projects) {
     String[] repos
     repos = projects.split(',')
     for(int i = 0; i < repos.size(); ++i) {
-        repo[i] = getDirectoryFromProject(repo[i])
+        repos[i] = getDirectoryFromProject(repos[i])
     }
     return repos
 }

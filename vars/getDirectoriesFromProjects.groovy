@@ -7,7 +7,8 @@ def call(String projects) {
     reposTmp = projects.split(',')
     for(int i = 0; i < reposTmp.size(); ++i) {
         println(reposTmp[i])
-        repos[i] = getDirectoryFromProject(reposTmp[i])
+        directory = getDirectoryFromProject(reposTmp[i])
+        repos.add(directory)
         println(repos[i])
     }
     return repos

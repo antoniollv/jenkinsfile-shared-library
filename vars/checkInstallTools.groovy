@@ -7,8 +7,7 @@ def call(env){
 // rm -rf /var/lib/apt/lists/* 
 // '''
     sh '''
-git  --version || apt-get install -y git
+git  --version || echo "¡ATENCION! git no esta Instalado"
 diff --version || echo "¡ATENCION! diff no esta Instalado"
-rm -rf /var/lib/apt/lists/* 
 '''
 }

@@ -2,10 +2,13 @@
 
 def call(String projects) {
 
+    String[] reposTmp
     String[] repos
-    repos = projects.split(',')
-    for(int i = 0; i < repos.size(); ++i) {
-        repos[i] = getDirectoryFromProject(repos[i])
+    reposTmp = projects.split(',')
+    for(int i = 0; i < reposTmp.size(); ++i) {
+        println(reposTmp[i])
+        repos[i] = getDirectoryFromProject(reposTmp[i])
+        println(repos[i])
     }
     return repos
 }

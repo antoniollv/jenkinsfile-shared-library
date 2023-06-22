@@ -2,8 +2,8 @@
 
 def call(String projects) {
 
+    def repos = []
     String[] reposTmp
-    String[] repos
     reposTmp = projects.split(',')
     for(int i = 0; i < reposTmp.size(); ++i) {
         println(reposTmp[i])

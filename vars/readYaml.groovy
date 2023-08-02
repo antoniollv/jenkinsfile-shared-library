@@ -3,7 +3,7 @@
 import org.yaml.snakeyaml.Yaml
 def call(String path){
         
-        def pathYml = path
+        def pathYml = './' + path
         
         def request = libraryResource pathYml
         def yamlObject = new Yaml()

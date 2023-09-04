@@ -6,5 +6,5 @@
 */
 def call(resource, nodePath) {
     def resourceFile = libraryResource "com/moradores/${resource}"
-    sh(returnStatus: false, script: "echo \"$resorceFile\" > \"$nodePath\"")
+    sh(returnStatus: false, script: "echo \"$resourceFile\" > \"$nodePath\"")
 }

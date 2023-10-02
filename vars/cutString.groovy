@@ -4,7 +4,7 @@ def call(String string, String cutChar, boolean right = false) {
     if (right) {
         string  = string.substring(posCutChar + 1)
     } else {
-        string  = string.getAt(0..posCutChar)
+        string  = string.getAt(0..(posCutChar -1))
     }
     return string
 }

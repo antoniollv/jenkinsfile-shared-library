@@ -1,15 +1,15 @@
 SNAPSHOT:
-  uy_tron_fe_nwt: 0.00.09-SNAPSHOT
-  uy_tron_be_nwt: 0.00.09-SNAPSHOT
-  uy_tron_cmn_api: 0.00.10-SNAPSHOT
-  uy_tron_isu_api: 0.00.10-SNAPSHOT
-  uy_tron_lss_api: 0.00.09-SNAPSHOT
-  uy_tron_btc_api: 0.00.09-SNAPSHOT
-  uy_tron_tsy_api: 0.00.09-SNAPSHOT
-  uy_tron_thp_api: 0.00.09-SNAPSHOT
+  uy_tron_fe_nwt: 0.00.01-SNAPSHOT
+  uy_tron_be_nwt: 0.00.02-SNAPSHOT
+  uy_tron_cmn_api: 0.00.03-SNAPSHOT
+  uy_tron_isu_api: 0.00.04-SNAPSHOT
+  uy_tron_lss_api: 0.00.05-SNAPSHOT
+  uy_tron_btc_api: 0.00.06-SNAPSHOT
+  uy_tron_tsy_api: 0.00.07-SNAPSHOT
+  uy_tron_thp_api: 0.00.08-SNAPSHOT
   uy_tron_client_tw: 0.00.09-SNAPSHOT
-  uy_tron_srv_tw: 0.00.09-SNAPSHOT
-  uy_tron_rpt_nwt: 0.00.04-SNAPSHOT
+  uy_tron_srv_tw: 0.00.10-SNAPSHOT
+  uy_tron_rpt_nwt: 0.00.11-SNAPSHOT
 none:
   uy_tron_be_nwt: 0.00.04-SNAPSHOT
 RC:

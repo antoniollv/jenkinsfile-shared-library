@@ -6,25 +6,13 @@ import static org.yaml.snakeyaml.DumperOptions.FlowStyle.BLOCK
 def call() {
     getLibraryResource('mapfre/tron-pipeline-release.ORIGEN.yml', 'tron-pipeline-release.ORIGEN.yml')
     def dataYaml = readYaml  file: 'tron-pipeline-release.ORIGEN.yml'
-    Map<String, Object> dataYamlPais = new HashMap<String, Object>()
-    echo "dataYaml class: ${dataYaml.getClass()}"
-    echo "dataYamlPais class: ${dataYamlPais.getClass()}"
-    dataYamlPais.put('planId', dataYaml.planId)
-    echo "dataYamlPais: ${dataYamlPais}"
     def projectConfig = dataYaml.project_config
     def traductionPais = new traductionLanzador().getTraductions('Panama')
-    echo "${traductionPais}"
     def projects = []
-    projectConfig.each { project ->
-        echo "project: ${project}"
-        echo "project class: ${project.getClass()}"
-        echo "project name origen: ${project.get('name')}"
-        echo "project name destino: ${traductionPais.get(project.get('name'))}"
+    projectConfig.each { project ->        
         projects.add(loadMap(project, traductionPais))
     }
-    dataYamlPais.put('project_config', projects)
-    echo "dataYamlPais: ${dataYamlPais}"
-    dataYamlPais.put('global_parameter', dataYaml.global_parameter)
+    def dataYamlPais = ['planId':dataYaml.planId, 'project_config':projects, 'global_parameter':dataYaml.global_parameter]
     echo "dataYamlPais: ${dataYamlPais}"
     writeFile file:'pais.yaml', text:yamlToString(dataYamlPais)
     sh 'cat pais.yaml'

@@ -34,8 +34,10 @@ def loadMap(project, traductionPais) {
     def projectPais = [:]
     name = traductionPais.get(project.get('name')).toString()
     projectPais.put('name', name)
-    projectPais.put('name_stage', "${traductionPais.get(project.get('name_stage'))}")
-    projectPais.put('name_repo', "${traductionPais.get(project.get('name_repo'))}")
+    name_stage = traductionPais.get(project.get('name_stage').toString())
+    projectPais.put('name_stage', name_stage)
+    name_repo = traductionPais.get(project.get('name_repo').toString())
+    projectPais.put('name_repo', name_repo)
     projectPais.put('version', 'Alfalfa')
     projectPais.put('source_branch', 'Development')
     projectPais.put('fase1', '0')

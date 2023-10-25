@@ -26,8 +26,7 @@ def call() {
     echo "dataYamlPais: ${dataYamlPais}"
     dataYamlPais.put('global_parameter', dataYaml.global_parameter)
     echo "dataYamlPais: ${dataYamlPais}"
-    
-    writeFile file:'pais.yaml', text: yamlToString(dataYamlPais)
+    writeFile file:'pais.yaml', text:yamlToString(dataYamlPais)
     sh 'cat pais.yaml'
 }
 
@@ -61,4 +60,11 @@ class traductionLanzador {
             break
         }
     }
+}
+
+@NonCPS
+String yamlToString(Object data){
+    def opts = new DumperOptions()
+    opts.setDefaultFlowStyle(BLOCK)
+    return new Yaml(opts).dump(data)
 }

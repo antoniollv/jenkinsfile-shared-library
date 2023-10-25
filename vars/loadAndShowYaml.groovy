@@ -32,7 +32,7 @@ def call() {
 
 def loadMap(project, traductionPais) {
     def projectPais = [:]
-    projectPais.put('name', "${traductionPais.get(project.get('name'))}")
+    projectPais.put('name', "${traductionPais.get(project.get('name')).toString()}")
     projectPais.put('name_stage', "${traductionPais.get(project.get('name_stage'))}")
     projectPais.put('name_repo', "${traductionPais.get(project.get('name_repo'))}")
     projectPais.put('version', 'Alfalfa')

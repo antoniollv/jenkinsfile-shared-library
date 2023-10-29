@@ -1,0 +1,26 @@
+deployment_order: 
+  - name: core_bk_md
+  - name: core_bk_tw
+  - name: core_bk_nwt
+  - name: prd_dotal_bk
+  - name: uy_tron_cmn_bk
+  - name: uy_trp_cmn_bk
+  - name: uy_trc_bk
+  - name: uy_tron_be_nwt
+  - name: uy_tron_fe_nwt
+  - name: uy_tron_rpt_nwt
+  - name: uy_tron_cmn_api
+  - name: uy_tron_isu_api
+  - name: uy_tron_lss_api
+  - name: uy_tron_thp_api
+  - name: uy_tron_tsy_api
+  - name: uy_tron_btc_api
+  # - name: uy_tron_spl_api
+  - name: uy_tron_business_api
+  - name: uy_tron_client_tw
+    dependencies: [uy_tron_srv_tw]
+  - name: tron_flow_orq_cd
+  # - name: core_tron_gdc_cd
+  - name: uy_tron_fe_tsy
+  - name: uy_tron_fe_lss
+  - name: uy_tron_fe_isu

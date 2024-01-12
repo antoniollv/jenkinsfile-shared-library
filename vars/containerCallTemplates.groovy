@@ -11,7 +11,7 @@ def call(Map config = [:]) {
         contenedores += libraryResource "templates/${item}.tpl"
     }
 
-    agentCreator += renderTemplateText(templatePath:template,
+    def agentCreator = renderTemplateText(templatePath:template,
         tokens: [
             acrName: config.acrName,
             credentialSecret: config.credentialSecret,

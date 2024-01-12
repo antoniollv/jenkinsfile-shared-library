@@ -15,9 +15,3 @@ spec:
         privileged: true
   imagePullSecrets:
     - name: $credentialSecret
-  // tolerations:
-// - key: "ndop.jenkins.worker"
-//   value: "true"
-//   effect: "NoSchedule"
-// nodeSelector:
-//   workload: jenkins-worker

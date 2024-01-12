@@ -4,7 +4,7 @@ def call(Map config = [:]) {
     String cloud = 'kubernetes'
 
     def ret = [:]
-    det template = 'templates/agentTemplates.tpl'
+    def template = 'templates/agentTemplates.tpl'
     def contenedores = ''
     def listContainers = config.listContainers
     listContainers.each { item ->

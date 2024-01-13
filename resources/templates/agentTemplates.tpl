@@ -1,15 +1,11 @@
-<% [
-    'org.apache.groovy.parser.antlr4.util.StringUtils.*',
-].each { importClass -> %>
-    <% "import ${importClass}" %>
-<% } %>
 apiVersion: v1
 kind: Pod
 spec:
   securityContext:
     runAsUser: 1001
   containers:
-$containers.padLeft(4)
+<% println "jojojo"%>
+$containers
   imagePullSecrets:
     - name: $credentialSecret
 <% if (nodeSelectorValue!="--__UNDEFINED__--") { %>

@@ -1,10 +1,15 @@
+<% [
+    'groovy.text.*',
+].each { importClass -> %>
+    <% "import ${importClass}" %>
+<% } %>
 apiVersion: v1
 kind: Pod
 spec:
   securityContext:
     runAsUser: 1001
   containers:
-<% print containers.padLeft(4) %>
+$print containers.padLeft(4)
   imagePullSecrets:
     - name: $credentialSecret
 <% if (nodeSelectorValue!="--__UNDEFINED__--") { %>

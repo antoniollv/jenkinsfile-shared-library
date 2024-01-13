@@ -1,5 +1,5 @@
 <% [
-    'groovy.text.*',
+    'org.apache.groovy.parser.antlr4.util.StringUtils.*',
 ].each { importClass -> %>
     <% "import ${importClass}" %>
 <% } %>

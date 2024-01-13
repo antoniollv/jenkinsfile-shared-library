@@ -4,7 +4,7 @@ spec:
   securityContext:
     runAsUser: 1001
   containers:
-${containers.padRight(10)}
+${containers.porLaDerecha(10)}
   imagePullSecrets:
     - name: $credentialSecret
 <% if (nodeSelectorValue!="--__UNDEFINED__--") { %>

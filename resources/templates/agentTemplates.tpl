@@ -9,7 +9,7 @@ spec:
   securityContext:
     runAsUser: 1001
   containers:
-$print containers.padLeft(4)
+$containers.padLeft(4)
   imagePullSecrets:
     - name: $credentialSecret
 <% if (nodeSelectorValue!="--__UNDEFINED__--") { %>

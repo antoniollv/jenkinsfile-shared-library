@@ -4,7 +4,7 @@ spec:
   securityContext:
     runAsUser: 1001
   containers:
-<% containers = containers.padRight(4) %>
+<% containers = containers.padLeft(4) %>
 $containers
   imagePullSecrets:
     - name: $credentialSecret

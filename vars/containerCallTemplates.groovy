@@ -8,7 +8,7 @@ def call(Map config = [:]) {
     def containers = ''
     def listContainers = config.listContainers
     listContainers.each { item ->
-        containers += libraryResource "templates/${item}.tpl"
+        containers = containers + libraryResource "templates/${item}.tpl" + "\n"
     }
 
     def agentCreator = renderTemplateText(templatePath:template,

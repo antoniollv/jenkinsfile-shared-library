@@ -17,7 +17,7 @@ def call(Map config = [:]) {
             credentialSecret: config.credentialSecret,
             nodeSelectorValue: config.nodeSelectorValue == null ? 'jenkins-worker' : config.nodeSelectorValue,
             nodeTaintKey: config.nodeTaintKey == null ? 'ndop.jenkins.worker' : config.nodeTaintKey,
-            containers: containers.padLeft(4)
+            containers: containers.padRight(4)
         ])
 
     ret['cloud'] = cloud

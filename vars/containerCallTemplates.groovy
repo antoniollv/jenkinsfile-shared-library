@@ -10,7 +10,7 @@ def call(Map config = [:]) {
     listContainers.each { item ->
         
         container = libraryResource "templates/${item}.tpl"
-        container = containers.eachLine().collect { linea ->
+        container = container.eachLine().collect { linea ->
             line.padLeft(4, ' ')
         }
         containers = containers + container + "\n"

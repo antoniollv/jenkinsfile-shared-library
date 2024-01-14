@@ -10,8 +10,8 @@ def call(Map config = [:]) {
     listContainers.each { item ->
         containers = containers + libraryResource("templates/${item}.tpl") + "\n"
     }
-    containers = containers.toString().eachLine().collect { linea ->
-        line.apadLeft(4, ' ')
+    containers = containers.eachLine().collect { linea ->
+        line.padLeft(4, ' ')
     }
     
     def agentCreator = renderTemplateText(templatePath:template,

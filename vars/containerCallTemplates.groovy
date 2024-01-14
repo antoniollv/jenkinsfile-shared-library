@@ -11,7 +11,8 @@ def call(Map config = [:]) {
         container = libraryResource "templates/${item}.tpl"
         println container.getClass()
         container = container.split('\n').collect { linea ->
-            "    $linea"
+            linea.padLeft(linea.length() + 4, ' ')
+//            "    $linea"
         }.join('\n')
         println container.getClass()
         containers = containers + container.toString() + "\n"

@@ -7,9 +7,8 @@ def call(Map config = [:]) {
     def template = 'templates/agentTemplates.tpl'
     def containers = ''
     def listContainers = config.listContainers
-    listContainers.each { item ->
-        
-        container = libraryResource()"templates/${item}.tpl"
+    listContainers.each { item ->        
+        container = libraryResource "templates/${item}.tpl"
         container = container.split('\n').collect { linea ->
             line.padLeft(4, ' ')
         }

@@ -12,7 +12,7 @@ def call(Map config = [:]) {
         println container.getClass()
         container = container.split('\n').collect { linea ->
             linea.padLeft(4, ' ')
-        }
+        }.append('\n')
         println container.getClass()
         containers = containers + container.toString() + "\n"
     }

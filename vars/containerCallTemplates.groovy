@@ -10,7 +10,10 @@ def call(Map config = [:]) {
     listContainers.each { item ->
         containers = containers + libraryResource("templates/${item}.tpl") + "\n"
     }
-
+    containers = containers.eachLine().collect { linea ->
+        line.apadLeft(4, ' ')
+    }
+    
     def agentCreator = renderTemplateText(templatePath:template,
         tokens: [
             acrName: config.acrName,

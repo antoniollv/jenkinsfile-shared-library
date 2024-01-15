@@ -16,7 +16,7 @@ def call(Map config = [:]) {
             acrName: config.acrName,
             credentialSecret: config.credentialSecret,
             nodeSelectorValue: config.nodeSelectorValue == null ? 'jenkins-worker' : config.nodeSelectorValue,
-            nodeTaintKey: config.nodeTaintKey == null ? 'ndop.jenkins.worker' : config.nodeTaintKey
+            nodeTaintKey: config.nodeTaintKey == null ? 'ndop.jenkins.worker' : config.nodeTaintKey,
             containers: containers
         ])
 

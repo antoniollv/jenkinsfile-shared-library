@@ -5,10 +5,10 @@ def call(Map config = [:]) {
 
     def ret = [:]
     def template = 'templates/agentTemplates.tpl'
-    def contenedores = ''
+    def containers = ''
     def listContainers = config.listContainers
     listContainers.each { item ->
-        contenedores += libraryResource "templates/${item}.tpl"
+        containers += libraryResource "templates/${item}.tpl"
     }
 
     def agentCreator = renderTemplateText(templatePath:template,
@@ -17,6 +17,7 @@ def call(Map config = [:]) {
             credentialSecret: config.credentialSecret,
             nodeSelectorValue: config.nodeSelectorValue == null ? 'jenkins-worker' : config.nodeSelectorValue,
             nodeTaintKey: config.nodeTaintKey == null ? 'ndop.jenkins.worker' : config.nodeTaintKey
+            containers: containers
         ])
 
     ret['cloud'] = cloud

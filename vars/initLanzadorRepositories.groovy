@@ -3,9 +3,9 @@
 import org.yaml.snakeyaml.Yaml
 
 // Método que lanza los repositorio en el orden que se indica en el yml de orden de despliegue.
-def call(repositories, country = 'URUGUAY') {
+def call(repositories, country) {
     def fileYaml = 'deployment-order.yml'
-    getLibraryResource("mapfre/${fileYaml}", fileYaml)
+    getLibraryResource("${fileYaml}", fileYaml)
     def deploymentOrder = readYaml  file: fileYaml
     def map = [:]
     
@@ -56,12 +56,7 @@ def private launchJobs (repository, repos, repositoryList){
 def private prepareJob (repository){
     def repositoryJob = PIPELINE_REPOSITORY_BRANCH.replace(":repository","${repository}").replace(":branch","development")
     echo "build job: "${repositoryJob}", parameters: [booleanParam(name:'MANUAL_BUILD', value: true)], propagate: false"
-    //def job = build job: "${repositoryJob}", parameters: [booleanParam(name:'MANUAL_BUILD', value: true)], propagate: false
-    // if(job.result != Constants.SUCCESS) {
-    //   unstable "WARNING: Update LB job result is ${job.result}"
-    // }
-    // echo "JOB RESULT: ${repository} - ${job.result}"
-    // return job.result
+    
 }
 
 // Método que evalua los que dependen de un repositoprio que ya se ha lanzado en el pase. 
